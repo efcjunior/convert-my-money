@@ -1,0 +1,9 @@
+<%- include('header.ejs')%>
+<div class="result">
+    <% if(error){ %>
+    <%= error %>
+    <% }else{ %>
+        <%= quote %> dollar for <%= amount %> amount is <%= conversion %> real
+    <% } %>
+</div>
+<%- include('footer.ejs')%>

@@ -1,0 +1,19 @@
+{
+  "name": "convert-my-money",
+  "version": "1.0.0",
+  "description": "convert my money class project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "convert",
+    "money"
+  ],
+  "author": "everson",
+  "license": "MIT",
+  "dependencies": {
+    "ejs": "^3.0.1",
+    "express": "^4.17.1"
+  }
+}
