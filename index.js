@@ -5,13 +5,15 @@ const currency = require('./lib/currency')
 
 /* config*/
 const app = express()
+console.log('[Info] setting port environment')
+const port = process.env.PORT || 3000
 app.set('view engine', 'ejs')
 console.log('[Info] setting view engine with ejs')
 app.set('views', path.join(__dirname, 'views'))
 console.log('[Info] setting views directory ' + path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname,'public')))
 console.log('[Info] setting public directory ' + path.join(__dirname, 'public'))
-app.listen(3000, err =>{
+app.listen(port, err =>{
     if(err){
         console.log('[Error] Failed application initialization')
     }else{
