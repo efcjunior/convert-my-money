@@ -2,6 +2,7 @@
 const express = require('express')
 const path = require('path')
 const currency = require('./lib/currency')
+const bacenAPI = require('./lib/bacen.api')
 
 /* config*/
 const app = express()
@@ -22,8 +23,11 @@ app.listen(port, err =>{
 })
 
 /*view methods*/
-app.get('/',(req, res) => {
-    res.render('home')
+app.get('/',async (req, res) => {
+    const quote = await bacenAPI.getQuote('')
+    res.render('home', {
+        quote
+    })
 })
 
 app.get('/quote', (req, res) =>{

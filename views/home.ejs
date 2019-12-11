@@ -1,6 +1,6 @@
 <%- include('header.ejs')%>
 <form method="GET" action="/quote">
-    <input name="quote" type="number" placeholder="dollar quote"><br>
+    <input name="quote" type="number" placeholder="dollar quote" value="<%=quote%>"><br>
     <input name="amount" type="number" placeholder="dollar amount"><br>
     <button>Convert</button>
 </form>
