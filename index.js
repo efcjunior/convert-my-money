@@ -24,7 +24,7 @@ app.listen(port, err =>{
 
 /*view methods*/
 app.get('/',async (req, res) => {
-    const quote = await bacenAPI.getQuote('')
+    const quote = await bacenAPI.getQuote()
     res.render('home', {
         quote
     })
